@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-16T12:00:00Z",
+  "formula": {
+    "type": "annuity",
+    "description": "Аннуитетная формула: M = P × (r(1+r)^n) / ((1+r)^n - 1)",
+    "code": "function calculateMonthlyPayment(principal, annualRate, months) { const r = annualRate / 12 / 100; if (r === 0) return principal / months; const pow = Math.pow(1 + r, months); return principal * (r * pow) / (pow - 1); }"
+  },
+  "banks": [
+    {
+      "id": "kapitalbank",
+      "name": "Kapitalbank",
+      "logo": "https://kapitalbank.uz/favicon.ico",
+      "website": "https://kapitalbank.uz",
+      "baseRate": {
+        "working": 20.5,
+        "nonWorking": 24.5
+      },
+      "description": "Капиталбанк - крупнейший частный банк Узбекистана",
+      "minDownPayment": 20,
+      "maxTermMonths": 60,
+      "features": [
+        "Быстрое одобрение",
+        "Онлайн заявка",
+        "Страхование включено"
+      ],
+      "contactPhone": "+998 71 200 00 00",
+      "active": true
+    },
+    {
+      "id": "ipakyulibank",
+      "name": "Ipak Yuli Bank",
+      "logo": "https://ipakyulibank.uz/favicon.ico",
+      "website": "https://ipakyulibank.uz",
+      "baseRate": {
+        "working": 21.0,
+        "nonWorking": 25.0
+      },
+      "description": "Ipak Yuli Bank - надежный партнер в автокредитовании",
+      "minDownPayment": 25,
+      "maxTermMonths": 48,
+      "features": [
+        "Гибкие условия",
+        "Низкий первый взнос",
+        "Программа лояльности"
+      ],
+      "contactPhone": "+998 71 244 44 44",
+      "active": true
+    },
+    {
+      "id": "asakabank",
+      "name": "Asaka Bank",
+      "logo": "https://asakabank.uz/favicon.ico",
+      "website": "https://asakabank.uz",
+      "baseRate": {
+        "working": 19.5,
+        "nonWorking": 23.5
+      },
+      "description": "Асака Банк - лучшие ставки на рынке",
+      "minDownPayment": 15,
+      "maxTermMonths": 72,
+      "features": [
+        "Минимальные ставки",
+        "Длительный срок",
+        "Без скрытых комиссий"
+      ],
+      "contactPhone": "+998 71 140 00 00",
+      "active": true
+    },
+    {
+      "id": "hamkorbank",
+      "name": "Hamkorbank",
+      "logo": "https://hamkorbank.uz/favicon.ico",
+      "website": "https://hamkorbank.uz",
+      "baseRate": {
+        "working": 22.0,
+        "nonWorking": 26.0
+      },
+      "description": "Хамкорбанк - ваш надежный партнер",
+      "minDownPayment": 30,
+      "maxTermMonths": 36,
+      "features": [
+        "Быстрое оформление",
+        "Минимум документов",
+        "Индивидуальный подход"
+      ],
+      "contactPhone": "+998 71 202 00 00",
+      "active": true
+    },
+    {
+      "id": "agrobank",
+      "name": "Agrobank",
+      "logo": "https://agrobank.uz/favicon.ico",
+      "website": "https://agrobank.uz",
+      "baseRate": {
+        "working": 21.5,
+        "nonWorking": 25.5
+      },
+      "description": "Агробанк - специальные условия для автокредитов",
+      "minDownPayment": 20,
+      "maxTermMonths": 60,
+      "features": [
+        "Специальные программы",
+        "Гос. поддержка",
+        "Выгодные условия"
+      ],
+      "contactPhone": "+998 71 239 11 00",
+      "active": true
+    }
+  ],
+  "metadata": {
+    "currency": "UZS",
+    "adminTelegramIds": [],
+    "rateUpdateFrequency": "daily",
+    "notes": "Ставки могут меняться. Проверяйте актуальность в банках."
+  }
+}
